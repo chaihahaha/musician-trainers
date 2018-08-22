@@ -14,8 +14,10 @@ For counter=1to cycles
     randN=GetRandNumber(0,20)
     ans=InputBox(quesArray(randN))
     If ans=keyArray(randN) Then
-        MsgBox "Right"
+        MsgBox "ÕýÈ·"
+    ElseIf ans="" Or ans=vbEmpty Then
+        Exit For
     Else
-        MsgBox "False"
+        MsgBox "´íÎó"
     End If
 Next
