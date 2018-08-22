@@ -18,6 +18,6 @@ For counter=1to cycles
     ElseIf ans="" Or ans=vbEmpty Then
         Exit For
     Else
-        MsgBox "´íÎó"
+        MsgBox "´íÎó£¡ÕıÈ·´ğ°¸£º"&quesArray(randN)&":"&keyArray(randN)
     End If
 Next
