@@ -18,7 +18,7 @@ var note_ques = new Array("q", "w", "e", "r", "t", "y", "u", "i", "o", "p", "[",
 var note_flat = new Array("X", "C", "V", "B", "N", "M", "&#60;", "&#62;", "?", "Ÿ", "∕", "¤", "‹", "›", "&#61441;", "&#61442;", "‡", "°");
 var note_sharp = new Array("‚", "&#8212;", "±", "Œ", "„", "‰", "Â", "Ê", "Á", "Ë", "È", "Ø", "∏", "”", "’", "»", "Å", "Í");
 var clef = new Array("`", "1");
-var solfege_dic={"A":"la","B":"ti","C":"do","D":"re","E":"mi","F":"fa","G":"so","bA":"le","#A":"li","bB":"te","#B":"tai","bC":"de","#C":"di","bD":"ra","#D":"ri","bE":"me","#E":"mai","bF":"fe","#F":"fi","bG":"se","#G":"si"};
+var solfege_dic={"A":"la","B":"ti","C":"do","D":"re","E":"mi","F":"fa","G":"so","Ab":"le","A#":"li","Bb":"te","B#":"tai","Cb":"de","C#":"di","Db":"ra","D#":"ri","Eb":"me","E#":"mai","Fb":"fe","F#":"fi","Gb":"se","G#":"si"};
 var note = document.getElementById("musical_note");
 while (true) {
     var judge = randomNum(0, 1);
@@ -35,17 +35,20 @@ while (true) {
     }
 
     var user_ans = prompt("请输入音名或唱名：");
+    
     if (flat_sharp == 1) {
-        var right_ans = "b" + note_ans[(select - 5 * judge + 7) % 7];
+        var right_ans = note_ans[(select - 5 * judge + 7) % 7] + "b";
     }
     else if (flat_sharp == 2) {
-        var right_ans = "#" + note_ans[(select - 5 * judge + 7) % 7];
+        var right_ans = note_ans[(select - 5 * judge + 7) % 7] + "#";
     }
     else if (flat_sharp == 0) {
         var right_ans = note_ans[(select - 5 * judge + 7) % 7];
     }
 
-    if (user_ans == right_ans || user_ans == solfege_dic[right_ans]) {
+    //user_ans = user_ans.toUpperCase();
+    //right_ans = right_ans.toUpperCase();
+    if (user_ans.toUpperCase() == right_ans.toUpperCase() || user_ans == solfege_dic[right_ans]) {
         alert("正确！");
     }
     else {

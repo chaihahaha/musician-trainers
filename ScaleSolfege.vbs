@@ -6,8 +6,8 @@ Dim scale
 Dim cycles
 Dim randN
 Dim counter
-scale=array("A B #C D E #F #G A","bB C D bE F G A bB","B #C #D E #F #G #A B","C D E F G A B C","bD bE F bG bA bB C bD","D E #F G A B #C D","bE F G bA bB C D bE","E #F #G A B #C #D E","F G A bB C D E F","bG bA bB bC bD bE F bG","G A B C D E #F G","bA bB C bD bE F G bA")
-cycles=InputBox("è¯·è¾“å…¥æµ‹è¯•æ•°ç›®")
+scale=array("A B C# D E F# G# A","Bb C D Eb F G A Bb","B C# D# E F# G# A# B","C D E F G A B C","Db Eb F Gb Ab Bb C Db","D E F# G A B C# D","Eb F G Ab Bb C D Eb","E F# G# A B C# D# E","F G A Bb C D E F","Gb Ab Bb Cb Db Eb F Gb","G A B C D E F# G","Ab Bb C Db Eb F G Ab")
+cycles=InputBox("ÇëÊäÈë²âÊÔÊýÄ¿")
 For counter=1to cycles
     randN=GetRandNumber(0,11)
     If right(left(scale(randN),2),1)=" " Then
