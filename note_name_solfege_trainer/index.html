@@ -5,12 +5,17 @@
 <title>note name practice</title>
 <style type="text/css" id="style">
     @font-face {
-        font-family:Lassus;
-        src:local("Lassus"),url('./LASSUS.TTF');
-    }
+  font-family: "LASSUS";
+  src: url("LASSUS.woff2") format("woff2"),
+       url("LASSUS.woff") format("woff"),
+       url("LASSUS.ttf") format("truetype"),
+       url("LASSUS.eot") format("embedded-opentype");
+  font-weight: normal;
+  font-style: normal;
+}
     #musical_note
     {
-        font-family: Lassus;
+        font-family: "LASSUS";
         font-size:100px;
     }
 </style>
