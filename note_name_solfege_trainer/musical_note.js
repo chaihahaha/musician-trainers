@@ -80,10 +80,11 @@ var solfege_dic={"A":"la","B":"ti","C":"do","D":"re","E":"mi","F":"fa","G":"so",
 var judge = randomNum(0, 1);
 var flat_sharp = randomNum(0, 2);
 var rnd = randomNum(0, 17);
-rightcount = 0;
-wrongcount = 0
-setupQuestion();
+var rightcount = 0;
+var wrongcount = 0
+
 $(function() {
+	setupQuestion();
 	$("#submit").on("click", questionAndAnswer);
 	$("input").keydown(function (event) {
 		if(event.keyCode == 13) questionAndAnswer();
